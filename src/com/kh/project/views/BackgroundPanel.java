@@ -16,7 +16,7 @@ public BackgroundPanel(JFrame mf) {
 	this.setLayout(null);
 	
 	panel = this;
-	
+	 //dsanbjfhasgjkahdbhajsldbjsabdhjl
 	JLabel label = new JLabel(new ImageIcon(new ImageIcon("images/¹æ.PNG").getImage().getScaledInstance(1000, 800, 0)));
 //	label.setBounds(0, 0, 1000, 800);
 	label.setSize(1024, 768);
