@@ -11,7 +11,7 @@ public class Ending1 extends JPanel{
 	public Ending1(MainFrame mf) {
 		this.mf = mf;
 		this.ending1 = this;
-		
+		//dfdf
 		Button btn = new Button();
 		
 	}
