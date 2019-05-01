@@ -33,7 +33,7 @@ public class Open3 extends JPanel{
 		 
 		 
 		 btn = new JButton(">>");
-		 btn.setBounds(900, 600, 50, 50);
+		 btn.setBounds(900, 650, 50, 50);
 		 
 		  JPanel panel3 = new JPanel();
 		  JLabel roomLabel = new JLabel(new ImageIcon(punch));
