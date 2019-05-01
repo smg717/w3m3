@@ -1,4 +1,4 @@
-package ujooujoo1;
+package com.kh.project.model.dao;
 
 import java.awt.Button;
 import java.awt.FlowLayout;
@@ -41,7 +41,7 @@ public class data1 {
         panel.setLayout(new GridLayout(3, 1));
         panel.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent windowEvent) {
-               
+                System.exit(0);
 
             }
         });
@@ -92,7 +92,6 @@ public class data1 {
         btnthree.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 statusLabel.setText("방이 열렸습니다");
-                System.exit(0);
             }
         });
    

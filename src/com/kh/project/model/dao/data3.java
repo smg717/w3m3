@@ -15,20 +15,20 @@ package com.kh.project.model.dao;
 	import javax.swing.ImageIcon;
 	import javax.swing.JPanel;
 	 
-	public class data2 {
+	public class data3 {
 	    private Frame mainFrame;
 	    private Label headerLabel;
 	    private Label statusLabel;
 	    private Panel controlPanel;
 
 	    
-	    public data2() {
+	    public data3() {
 	        prepareGUI();
 	        
 	    }
 	 
 	    public static void main(String[] args) {
-	        data2 awtControlDemo = new data2();
+	        data3 awtControlDemo = new data3();
 	        awtControlDemo.showButton();
 	        JPanel panel = new JPanel();
 	        Image icon = new ImageIcon("src/ujooujoo/tool.JPG").getImage().getScaledInstance(1024, 200, 0);
@@ -43,7 +43,7 @@ package com.kh.project.model.dao;
 	        panel.setLayout(new GridLayout(3, 1));
 	        panel.addWindowListener(new WindowAdapter() {
 	            public void windowClosing(WindowEvent windowEvent) {
-	           
+	              
 
 	            }
 	        });
@@ -52,7 +52,7 @@ package com.kh.project.model.dao;
 	        // 상단에 있는 라벨
 	        headerLabel = new Label();
 	        headerLabel.setAlignment(Label.CENTER);
-	        headerLabel.setText("추상화에 대해 올바른 설명을 고르시오");
+	        headerLabel.setText("_verload");
 	 
 	        // 하단 상태값 라벨
 	        statusLabel = new Label();
@@ -73,17 +73,22 @@ package com.kh.project.model.dao;
 	 
 	    private void showButton() {
 	 
-	        Button btnone = new Button("유연성을 확보하기 위해 구체적이지 않은것은 제거");
-	        Button btntwo = new Button("프로그램에서 불필요한점을 추출하지 않는다");
-	        Button btnthree = new Button("프로그램에서 불필요한 것 저장");
-	        Button btnfour = new Button("유연성을 확보하기위해 구체적인 것은 제거");
-
-	 
+	        Button btnone = new Button("1");
+	        Button btntwo = new Button("2");
+	        Button btnthree = new Button("3");
+	        Button btnfour = new Button("4");
+	        Button btnfive = new Button("5");
+	        Button btnsix = new Button("6");
+	        Button btnseven = new Button("7");
+	        Button btneight = new Button("8");
+	        Button btnnine = new Button("9");
+	        Button btnzero = new Button("0");
+	        
 	 
 	        btnone.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
-	                statusLabel.setText("문이 열렸습니다");
-	                System.exit(0);
+	                statusLabel.setText("오답입니다");
+	               
 	            }
 	        });
 	        
@@ -101,10 +106,40 @@ package com.kh.project.model.dao;
 	   
 	        btnfour.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
+	                statusLabel.setText("문이 열렸습니다");
+	                System.exit(0);
+	            }
+	        });
+	        btnfive.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
 	                statusLabel.setText("오답입니다");
 	            }
 	        });
-	        
+	        btnsix.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
+	                statusLabel.setText("오답입니다");
+	            }
+	        });
+	        btnseven.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
+	                statusLabel.setText("오답입니다");
+	            }
+	        });
+	        btneight.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
+	                statusLabel.setText("오답입니다");
+	            }
+	        });
+	        btnnine.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
+	                statusLabel.setText("오답입니다");
+	            }
+	        });
+	        btnzero.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
+	                statusLabel.setText("오답입니다");
+	            }
+	        });
 
 
 	        
@@ -112,6 +147,12 @@ package com.kh.project.model.dao;
 	        controlPanel.add(btntwo);
 	        controlPanel.add(btnthree);
 	        controlPanel.add(btnfour);
+	        controlPanel.add(btnfive);
+	        controlPanel.add(btnsix);
+	        controlPanel.add(btnseven);
+	        controlPanel.add(btneight);
+	        controlPanel.add(btnnine);
+	        controlPanel.add(btnzero);
 	      
 	 
 	        mainFrame.setVisible(true);
@@ -124,6 +165,7 @@ package com.kh.project.model.dao;
 			
 		}
 	}
+
 
 
 
