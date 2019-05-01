@@ -1,11 +1,11 @@
 package com.kh.project.views;
 
-import java.awt.Button;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -25,7 +25,7 @@ public class Stage2 extends JPanel {
 
 		JLabel label1 = new JLabel(new ImageIcon(back));
 
-		Button btn = new Button("&&&");
+		JButton btn = new JButton("&&&");
 		btn.setBounds(900, 600, 50, 50);
 		stage2.add(btn);
 		mf.add(btn);

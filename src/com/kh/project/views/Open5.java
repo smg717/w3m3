@@ -1,22 +1,11 @@
 package com.kh.project.views;
 
-import java.awt.Button;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-
-import java.awt.Button;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -29,14 +18,14 @@ public class Open5 extends JPanel{
 	private static final long serialVersionUID = -8020610765716293894L;
 	private MainFrame mf;
 	private JPanel open5;
-	private Button btn;
+	private JButton btn;
 	
 	public Open5(MainFrame mf) {
 		
 		this.mf= mf;
 		this.open5 = this;
 		
-		 Image talk = new ImageIcon("images/4.png").getImage().getScaledInstance(1024, 200, 0);
+		 Image talk = new ImageIcon("images/일단나가.png").getImage().getScaledInstance(1024, 200, 0);
 		 Image room = new ImageIcon("images/방.png").getImage().getScaledInstance(1024, 786, 0);
 		 
 		 
@@ -52,7 +41,7 @@ public class Open5 extends JPanel{
 		  panel4.add(talkLabel);
 	      
 
-		  btn = new Button(">>");
+		  btn = new JButton(">>");
 		  btn.setBounds(900, 600, 50, 50);
 		  talkLabel.add(btn);
 		  panel4.add(btn);
@@ -63,10 +52,11 @@ public class Open5 extends JPanel{
 	            
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	           Changepanel.changepanel(mf, open5, new Open6(mf));
+	           Changepanel.changepanel(mf, open5, new Stage1(mf));
 	           mf.remove(btn);
 	           mf.remove(panel3);
 	           mf.remove(panel4);
+	           
 	           
 //	           Popup p = new Popup();
 //	           p.puzzle();
