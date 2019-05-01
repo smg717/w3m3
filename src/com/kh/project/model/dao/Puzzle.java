@@ -13,7 +13,7 @@ public class Puzzle extends JPanel implements ActionListener{
 	int[][] panCount = new int[3][3];
 	
 	int brow,bcol;
-	
+
 	public Puzzle() {
 		JPanel p1 = new JPanel();
 		p1.setLayout(new GridLayout(3,3,2,2));

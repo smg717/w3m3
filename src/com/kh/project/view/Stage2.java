@@ -1,11 +1,11 @@
-package com.kh.project.views;
+package com.kh.project.view;
 
-import java.awt.Button;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -23,38 +23,47 @@ public class Stage2 extends JPanel {
 		Image back = new ImageIcon("images/2¹æ.PNG").getImage()
 				.getScaledInstance(1024, 768, 0);
 
+		JPanel panel = new JPanel();
 		JLabel label1 = new JLabel(new ImageIcon(back));
+		panel.add(label1);
 
-		Button btn = new Button("&&&");
+		JButton btn = new JButton("22");
 		btn.setBounds(900, 600, 50, 50);
-		stage2.add(btn);
+		
+		label1.add(btn);
+		panel.add(btn);
 		mf.add(btn);
-		
-		stage2.add(label1,"center");
-		mf.add(stage2);
-		
-		mf.add(this);
-		mf.setVisible(true);
-		mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		if(true) {
+//		if(true) {
 			btn.addActionListener(new ActionListener() {
-
+				
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					Changepanel.changepanel(mf,stage2, new Ending1(mf));
 					mf.remove(btn);
+					mf.remove(panel);
+//					mf.remove(this);
 				}
-			});}
-		else {
+			});
+//			}
+//		else {
 			btn.addActionListener(new ActionListener() {
-
+				
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					Changepanel.changepanel(mf,stage2, new Ending2(mf));
 					mf.remove(btn);
+					mf.remove(panel);
 				}
 			});
-		}
+//		}
+		
+		this.add(panel);
+		
+		mf.add(this);
+		mf.add(panel,"South");
+		
+		mf.setVisible(true);
+		mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	/**
 	 * 

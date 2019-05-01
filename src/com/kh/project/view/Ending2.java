@@ -1,4 +1,4 @@
-package com.kh.project.views;
+package com.kh.project.view;
 
 import java.awt.Color;
 import java.awt.Image;

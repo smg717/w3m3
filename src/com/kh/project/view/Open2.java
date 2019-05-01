@@ -1,42 +1,32 @@
-package com.kh.project.views;
+package com.kh.project.view;
 
-import java.awt.Button;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+public class Open2 extends JPanel{
 
-import java.awt.Button;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-public class Open5 extends JPanel{
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -8020610765716293894L;
 	private MainFrame mf;
-	private JPanel open5;
-	private Button btn;
+	private JPanel open2;
+	private JButton btn;
 	
-	public Open5(MainFrame mf) {
+	public Open2(MainFrame mf) {
 		
 		this.mf= mf;
-		this.open5 = this;
+		this.open2 = this;
 		
-		 Image talk = new ImageIcon("images/4.png").getImage().getScaledInstance(1024, 200, 0);
+		 Image talk = new ImageIcon("images/2.png").getImage().getScaledInstance(1024, 200, 0);
 		 Image room = new ImageIcon("images/¹æ.png").getImage().getScaledInstance(1024, 786, 0);
 		 
 		 
@@ -52,39 +42,42 @@ public class Open5 extends JPanel{
 		  panel4.add(talkLabel);
 	      
 
-		  btn = new Button(">>");
+		  btn = new JButton(">>");
 		  btn.setBounds(900, 600, 50, 50);
 		  talkLabel.add(btn);
 		  panel4.add(btn);
 		  mf.add(btn);
 		  
 		  
+		  this.add(panel3);
+		  this.add(panel4);
+		  
+		  mf.add(this);
+		  mf.add(panel4,"South");
+		  
+		  
 		  btn.addActionListener(new ActionListener() {
 	            
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	           Changepanel.changepanel(mf, open5, new Open6(mf));
-	           mf.remove(btn);
-	           mf.remove(panel3);
-	           mf.remove(panel4);
-	           
-//	           Popup p = new Popup();
-//	           p.puzzle();
-	            
+	            	Changepanel.changepanel(mf, panel3, new Open3 (mf));
+	               
+	               mf.remove(btn);
+	  	           mf.remove(panel3);
+	  	           mf.remove(panel4);
+	  	           
+	               
 	            }
 	         });
 
 		  
 
 		  
-		  this.add(panel3);
-		  this.add(panel4);
-
-		  mf.add(this);
-		  mf.add(panel4,"South");
-		  
 	      mf.setVisible(true);
 	      mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 }
+
+	
+
