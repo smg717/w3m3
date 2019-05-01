@@ -41,7 +41,8 @@ public class Open5 extends JPanel{
 		  panel4.add(talkLabel);
 	      
 
-		  btn = new JButton(">>");
+//		  btn = new JButton(">>");
+		  btn=new JButton(new ImageIcon ("images/right.PNG"));
 		  btn.setBounds(900, 600, 50, 50);
 		  talkLabel.add(btn);
 		  panel4.add(btn);

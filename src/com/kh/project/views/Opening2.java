@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -13,7 +14,7 @@ import javax.swing.JPanel;
 public class Opening2 extends JPanel{
 	private MainFrame mf;
 	private JPanel opening2;
-	private Button btn;
+	private JButton btn;
 
 	public Opening2(MainFrame mf) {
 		this.mf=mf;
@@ -24,7 +25,8 @@ public class Opening2 extends JPanel{
 				.getScaledInstance(1024, 768, 0); //이미지 사이즈
 		JLabel label = new JLabel(new ImageIcon(icon));
 
-		Button btn = new Button(">>");
+//		Button btn = new Button(">>");
+		btn=new JButton(new ImageIcon ("images/right.PNG"));
 		btn.setBounds(900, 600, 50, 50);
 
 		opening2.add(btn);

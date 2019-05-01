@@ -44,7 +44,9 @@ public class Open1 extends JPanel {
 		  panel2.add(talkLabel);
 	      
 
-		  btn = new JButton(">>");
+//		  btn = new JButton(">>");
+		  btn=new JButton(new ImageIcon ("images/right.PNG"));
+
 		  btn.setBounds(900, 600, 50, 50);
 		  talkLabel.add(btn);
 		  panel2.add(btn);

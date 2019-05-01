@@ -32,7 +32,8 @@ public class Open3 extends JPanel{
 		 Image punch = new ImageIcon("images/ÆÜ.png").getImage().getScaledInstance(1024, 786, 0);
 		 
 		 
-		 btn = new JButton(">>");
+//		 btn = new JButton(">>");
+		 btn=new JButton(new ImageIcon ("images/right.PNG"));
 		 btn.setBounds(900, 650, 50, 50);
 		 
 		  JPanel panel3 = new JPanel();
