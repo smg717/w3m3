@@ -1,4 +1,4 @@
-package com.kh.project.views;
+package com.kh.project.model.dao;
 
 import java.awt.Button;
 import java.awt.FlowLayout;

@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.kh.project.views.Opening.MyEvent;
-public class Opening extends JPanel {
+public class Opening3 extends JPanel{
 	   private MainFrame mf;
 	   private JPanel panel;
 	   private JPanel panel2;
@@ -21,16 +21,16 @@ public class Opening extends JPanel {
 	   private JLabel label;
 	   private JLabel label2;
 	   private Button btn;
-	   private JPanel opening;
+	   private JPanel opening3;
 	   
-	public Opening(MainFrame mf) {//방
+	public Opening3(MainFrame mf) {//방
 		panel = new JPanel();
 		panel2 = new JPanel();
-		this.opening = this;
+		this.opening3 = this;
 		this.mf=mf;
 		icon8 = new ImageIcon("images/방.PNG").getImage()
 				.getScaledInstance(1024, 768, 0);
-		icon = new ImageIcon("images/1.PNG").getImage()
+		icon = new ImageIcon("images/두.PNG").getImage()
 				.getScaledInstance(1024, 200, 0); //이미지 사이즈
 
 
@@ -41,7 +41,18 @@ public class Opening extends JPanel {
 		btn = new Button(">>");
 		btn.setBounds(900, 600, 50, 50);
 		btn.addActionListener(new MyEvent());
-
+		
+		
+		opening3.add(btn);
+		mf.add("South",btn);
+		
+		opening3.add(label2,"center");
+		mf.add(opening3);
+		
+		mf.add(this);
+		
+		
+		/*
 		panel.add(btn);
 		mf.add("South",btn);
 
@@ -50,7 +61,7 @@ public class Opening extends JPanel {
 
 		panel.add(label, "Center");
 		mf.add("South",panel);
-
+*/
 		mf.setVisible(true);
 		mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
@@ -59,7 +70,7 @@ public class Opening extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			if(e.getSource()==btn) {
-				Image icon = new ImageIcon("images/2.PNG")
+				Image icon = new ImageIcon("images/일단나가.PNG")
 		                  .getImage()
 		                  .getScaledInstance(1024, 200, 0);
 				label.setIcon(new ImageIcon(icon));
@@ -68,8 +79,8 @@ public class Opening extends JPanel {
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					Changepanel.changepanel(mf, opening, new Opening2(mf));
-//					mf.remove(btn);
+					Changepanel.changepanel(mf, opening3, new Stage1(mf));
+					mf.remove(btn);
 					mf.remove(panel);
 					mf.remove(panel2);
 					  
