@@ -34,7 +34,7 @@ public class data4 {
  
     
     
-    private void prepareGUI() {
+    public void prepareGUI() {
         //panel ¼ÂÆÃ
         Frame panel = new Frame("ROOMESCPAE");
         panel.setSize(400, 400);
