@@ -14,8 +14,6 @@ public class Stage1 extends JPanel{
 	private JPanel stage1;
 	private MainFrame mf;
 
-
-
 	public Stage1(MainFrame mf) {
 		this.mf = mf;
 		this.stage1 = this;
@@ -42,6 +40,7 @@ public class Stage1 extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Changepanel.changepanel(mf,stage1, new Stage2(mf));
+				
 //				Button btn2 = new Button("$$$");
 //				btn2.setBounds(500,300,50,50);
 //				label1.add(btn2);

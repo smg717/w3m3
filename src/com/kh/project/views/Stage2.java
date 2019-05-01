@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Stage2 extends JPanel{
+public class Stage2 extends JPanel {
 	private JPanel stage2;
 	private MainFrame mf;
 
