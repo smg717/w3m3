@@ -1,11 +1,11 @@
 package com.kh.project.views;
 
-import java.awt.Button;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -19,7 +19,7 @@ public class Open1 extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = -633467188519723346L;
-	private Button btn;
+	private JButton btn;
     private JPanel open1;
     private MainFrame mf;
 
@@ -44,7 +44,7 @@ public class Open1 extends JPanel {
 		  panel2.add(talkLabel);
 	      
 
-		  btn = new Button(">>");
+		  btn = new JButton(">>");
 		  btn.setBounds(900, 600, 50, 50);
 		  talkLabel.add(btn);
 		  panel2.add(btn);

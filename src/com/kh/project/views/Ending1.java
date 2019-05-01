@@ -28,7 +28,7 @@ public class Ending1 extends JPanel{
 		btn.setBounds(460, 350, 100, 100);
 		btn.setBackground(Color.white);
 		btn.setBorderPainted(false);
-//		btn.setOpaque(false);
+		btn.setOpaque(false);
 		btn.addActionListener(new ActionListener() {
 
 			@Override

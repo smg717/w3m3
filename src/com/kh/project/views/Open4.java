@@ -1,11 +1,11 @@
 package com.kh.project.views;
 
-import java.awt.Button;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -18,7 +18,7 @@ public class Open4 extends JPanel{
 	private static final long serialVersionUID = -8020610765716293894L;
 	private MainFrame mf;
 	private JPanel open4;
-	private Button btn;
+	private JButton btn;
 	
 	public Open4(MainFrame mf) {
 		
@@ -41,7 +41,7 @@ public class Open4 extends JPanel{
 		  panel4.add(talkLabel);
 	      
 
-		  btn = new Button(">>");
+		  btn = new JButton(">>");
 		  btn.setBounds(900, 600, 50, 50);
 		  talkLabel.add(btn);
 		  panel4.add(btn);
@@ -55,10 +55,7 @@ public class Open4 extends JPanel{
 	           mf.remove(btn);
 	           mf.remove(panel3);
 	           mf.remove(panel4);
-	           
-//	           Popup p = new Popup();
-//	           p.puzzle();
-	            
+
 	            }
 	         });
 
