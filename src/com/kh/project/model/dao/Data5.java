@@ -13,18 +13,18 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JPanel;
 
-public class data5 {
+public class Data5 {
     private Frame mainFrame;
     private Label headerLabel;
     private Label statusLabel;
     private Panel controlPanel;
  
-    public data5() {
+    public Data5() {
         prepareGUI();
     }
  
     public static void main(String[] args) {
-        data5 awtControlDemo = new data5();
+    	Data5 awtControlDemo = new Data5();
         awtControlDemo.showButton();
         JPanel panel = new JPanel();
         

@@ -15,20 +15,20 @@ package com.kh.project.model.dao;
 	import javax.swing.ImageIcon;
 	import javax.swing.JPanel;
 	 
-	public class data2 {
+	public class Data2 {
 	    private Frame mainFrame;
 	    private Label headerLabel;
 	    private Label statusLabel;
 	    private Panel controlPanel;
 
 	    
-	    public data2() {
+	    public Data2() {
 	        prepareGUI();
 	        
 	    }
 	 
 	    public static void main(String[] args) {
-	        data2 awtControlDemo = new data2();
+	    	Data2 awtControlDemo = new Data2();
 	        awtControlDemo.showButton();
 	        JPanel panel = new JPanel();
 	       

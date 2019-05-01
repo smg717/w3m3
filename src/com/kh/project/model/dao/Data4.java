@@ -15,18 +15,18 @@ import java.awt.event.WindowEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
  
-public class data4 {
+public class Data4 {
     private Frame mainFrame;
     private Label headerLabel;
     private Label statusLabel;
     private Panel controlPanel;
  
-    public data4() {
+    public Data4() {
         prepareGUI();
     }
  
     public static void main(String[] args) {
-        data4 awtControlDemo = new data4();
+    	Data4 awtControlDemo = new Data4();
         awtControlDemo.showButton();
         JPanel panel = new JPanel();
         
