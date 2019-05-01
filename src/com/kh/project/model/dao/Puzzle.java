@@ -1,141 +1,200 @@
 package com.kh.project.model.dao;
 
 import java.awt.*;
-import javax.swing.*;
 import java.awt.event.*;
 
-public class Puzzle extends JPanel implements ActionListener{
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
-	JButton[][] b = new JButton[3][3];
-	JButton b1 = new JButton("START");
-	JButton b2 = new JButton("EXIT");
+public class Puzzle extends JFrame implements ActionListener{
+	private ImageIcon backImg = new ImageIcon("±Ý°í.png");
+	private Image img = backImg.getImage();
 	
-	int[][] panCount = new int[3][3];
+	public void paint(Graphics g) {
+		g.drawImage(img, 0, 0, this);
+	}
 	
-	int brow,bcol;
-	
-	public Puzzle() {
-		JPanel p1 = new JPanel();
-		p1.setLayout(new GridLayout(3,3,2,2));
-		
-		int k = 1;
-		
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++) {
-				b[i][j] = new JButton(String.valueOf(k));
-				p1.add(b[i][j]);
-				b[i][j].addActionListener(this);
-				k++;
-			}
-		}
-		
-		JPanel p2 = new JPanel();
-		p2.add(b1);
-		p2.add(b2);
-		
-		setLayout(null);
-		p1.setBounds(150, 50, 340, 300);
-		p2.setBounds(150, 360, 340, 35);
-		
-		add(p1);
-		add(p2);
+	Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
+	Puzzle(){
+		super("Puzzle");
+		b1 = new Button("1");
+		b1.setBounds(50, 100, 40, 40);
+		b2 = new Button("2");
+		b2.setBounds(100, 100, 40, 40);
+		b3 = new Button("3");
+		b3.setBounds(150, 100, 40, 40);
+		b4 = new Button("4");
+		b4.setBounds(50, 150, 40, 40);
+		b5 = new Button("5");
+		b5.setBounds(100, 150, 40, 40);
+		b6 = new Button("6");
+		b6.setBounds(150, 150, 40, 40);
+		b7 = new Button("7");
+		b7.setBounds(50, 200, 40, 40);
+		b8 = new Button("");
+		b8.setBounds(100, 200, 40, 40);
+		b9 = new Button("8");
+		b9.setBounds(150, 200, 40, 40);
 		
 		b1.addActionListener(this);
 		b2.addActionListener(this);
+		b3.addActionListener(this);
+		b4.addActionListener(this);
+		b5.addActionListener(this);
+		b6.addActionListener(this);
+		b7.addActionListener(this);
+		b8.addActionListener(this);
+		b9.addActionListener(this);
+		
+		add(b1);
+		add(b2);
+		add(b3);
+		add(b4);
+		add(b5);
+		add(b6);
+		add(b7);
+		add(b8);
+		add(b9);
+		
+		setSize(400, 400);
+		setLayout(null);
+		setVisible(true);
 	}
 	
-	public void getRand() {
-		int[] num = new int[9];
-		int su = 0;
-		boolean bDash = false;
-		for(int i = 0; i < 9; i++) {
-			bDash = true;
-			while(bDash) {
-				su = (int)(Math.random() * 9);
-				bDash = false;
-				for(int j = 0; j < i; j++) {
-					if(num[j] == su) {
-						bDash = true;
-						break;
-					}
-				}
-			}
-			num[i] = su;
-			panCount[i/3][i%3] = su;
-			if(su == 8) {
-				brow = i/3;
-				bcol = i%3;
-			}
-		}
-	}
-	
-	public void display() {
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++) {
-				if(i == brow && j == bcol) {
-					b[i][j].setEnabled(false);
-					b[i][j].setText("");
-				}else {
-					b[i][j].setEnabled(true);
-					b[i][j].setText(String.valueOf(panCount[i][j] + 1));
-				}
-			}
-		}
-	}
-	
-	public boolean isEnd() {
-		int k = 0;
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++) {
-				if(panCount[i][j] != k)
-				return false;
-				k++;
-			}
-		}
-		return false;
-	}
-	
-	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == b1) {
-			getRand();
-			display();
-		}
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++) {
-				if(e.getSource() == b[i][j]) {
-					if(!(i == brow && Math.abs(bcol-j) == 1) || (j == bcol && Math.abs(brow - i) == 1))return;
-					panCount[brow][bcol] = panCount[i][j];
-					
-					panCount[i][j] = 8;
-					
-					brow = i;
-					bcol = j;
-					
-					display();
-					if(isEnd()) {
-						JOptionPane.showMessageDialog(this, "Game Over");
-					}
-				}
+			String label = b1.getLabel();
+			if(b2.getLabel().equals("")) {
+				b2.setLabel(label);
+				b1.setLabel("");
+			}
+			if(b4.getLabel().equals("")) {
+				b4.setLabel(label);
+				b1.setLabel("");
 			}
 		}
+		if(e.getSource() == b2) {
+			String label = b2.getLabel();
+			if(b1.getLabel().equals("")) {
+				b1.setLabel(label);
+				b2.setLabel("");
+			}
+			if(b3.getLabel().equals("")) {
+				b3.setLabel(label);
+				b2.setLabel("");
+			}
+			if(b5.getLabel().equals("")) {
+				b5.setLabel(label);
+				b2.setLabel("");
+			}
+		}
+		if(e.getSource() == b3) {
+			String label = b3.getLabel();
+			if(b2.getLabel().equals("")) {
+				b2.setLabel(label);
+				b3.setLabel("");
+			}
+			if(b6.getLabel().equals("")) {
+				b6.setLabel(label);
+				b3.setLabel("");
+			}
+		}
+		if(e.getSource() == b4) {
+			String label = b4.getLabel();
+			if(b1.getLabel().equals("")) {
+				b1.setLabel(label);
+				b4.setLabel("");
+			}
+			if(b7.getLabel().equals("")) {
+				b7.setLabel(label);
+				b4.setLabel("");
+			}
+			if(b5.getLabel().equals("")) {
+				b5.setLabel(label);
+				b4.setLabel("");
+			}
+		}
+		if(e.getSource() == b5) {
+			String label = b5.getLabel();
+			if(b2.getLabel().equals("")) {
+				b2.setLabel(label);
+				b5.setLabel("");
+			}
+			if(b6.getLabel().equals("")) {
+				b6.setLabel(label);
+				b5.setLabel("");
+			}
+			if(b4.getLabel().equals("")) {
+				b4.setLabel(label);
+				b5.setLabel("");
+			}
+			if(b8.getLabel().equals("")) {
+				b8.setLabel(label);
+				b5.setLabel("");
+			}
+		}
+		if(e.getSource() == b6) {
+			String label = b6.getLabel();
+			if(b9.getLabel().equals("")) {
+				b9.setLabel(label);
+				b6.setLabel("");
+			}
+			if(b5.getLabel().equals("")) {
+				b5.setLabel(label);
+				b6.setLabel("");
+			}
+		}
+		if(e.getSource() == b7) {
+			String label = b7.getLabel();
+			if(b4.getLabel().equals("")) {
+				b4.setLabel(label);
+				b7.setLabel("");
+			}
+			if(b8.getLabel().equals("")) {
+				b8.setLabel(label);
+				b7.setLabel("");
+			}
+		}
+		if(e.getSource() == b8) {
+			String label = b8.getLabel();
+			if(b9.getLabel().equals("")) {
+				b9.setLabel(label);
+				b8.setLabel("");
+			}
+			if(b7.getLabel().equals("")) {
+				b7.setLabel(label);
+				b8.setLabel("");
+			}
+			if(b5.getLabel().equals("")) {
+				b5.setLabel(label);
+				b8.setLabel("");
+			}
+		}
+		if(e.getSource() == b9) {
+			String label = b9.getLabel();
+			if(b6.getLabel().equals("")) {
+				b6.setLabel(label);
+				b9.setLabel("");
+			}
+			if(b8.getLabel().equals("")) {
+				b8.setLabel(label);
+				b9.setLabel("");
+			}
+		}
+		
+		if(b1.getLabel().equals("1")&&b2.getLabel().equals("2")
+				&&b3.getLabel().equals("3")&&b4.getLabel().equals("4")
+				&&b5.getLabel().equals("5")&&b6.getLabel().equals("6")
+				&&b7.getLabel().equals("7")&&b8.getLabel().equals("8")
+				&&b9.getLabel().equals("")) {
+			JOptionPane.showMessageDialog(this,"¾ÆÀÌÅÛÀ» È¹µæÇÏ¼Ì½À´Ï´Ù!");
+		}
+		
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-
-public static void main(String[] args) {
-	new Puzzle();
 }
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
