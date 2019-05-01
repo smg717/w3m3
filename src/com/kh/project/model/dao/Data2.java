@@ -16,27 +16,27 @@ package com.kh.project.model.dao;
 	import javax.swing.JPanel;
 	 
 	public class Data2 {
-	    private Frame mainFrame;
-	    private Label headerLabel;
-	    private Label statusLabel;
-	    private Panel controlPanel;
+	    public Frame mainFrame;
+	    public Label headerLabel;
+	    public Label statusLabel;
+	    public Panel controlPanel;
 
 	    
 	    public Data2() {
-	        prepareGUI();
+	        GUI();
 	        
 	    }
 	 
 	    public static void main(String[] args) {
 	    	Data2 awtControlDemo = new Data2();
-	        awtControlDemo.showButton();
+	        awtControlDemo.show();
 	        JPanel panel = new JPanel();
 	       
 	    }
 	 
 	    
 	    
-	    public void prepareGUI() {
+	    public void GUI() {
 	        //panel 셋팅
 	        Frame panel = new Frame("ROOMESCPAE");
 	        panel.setSize(400, 400);
@@ -71,7 +71,7 @@ package com.kh.project.model.dao;
 
 	    }
 	 
-	    public void showButton() {
+	    public void show() {
 	 
 	        Button btnone = new Button("유연성을 확보하기 위해 구체적이지 않은것은 제거");
 	        Button btntwo = new Button("프로그램에서 불필요한점을 추출하지 않는다");

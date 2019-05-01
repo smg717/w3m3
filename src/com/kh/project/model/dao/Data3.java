@@ -16,27 +16,27 @@ package com.kh.project.model.dao;
 	import javax.swing.JPanel;
 	 
 	public class Data3 {
-	    private Frame mainFrame;
-	    private Label headerLabel;
-	    private Label statusLabel;
-	    private Panel controlPanel;
+	    public Frame mainFrame;
+	    public Label headerLabel;
+	    public Label statusLabel;
+	    public Panel controlPanel;
 
 	    
 	    public Data3() {
-	        prepareGUI();
+	        GUI();
 	        
 	    }
 	 
 	    public static void main(String[] args) {
 	    	Data3 awtControlDemo = new Data3();
-	        awtControlDemo.showButton();
+	        awtControlDemo.show();
 	        JPanel panel = new JPanel();
 	        
 	    }
 	 
 	    
 	    
-	    public void prepareGUI() {
+	    public void GUI() {
 	        //panel ¼ÂÆÃ
 	        Frame panel = new Frame("ROOMESCPAE");
 	        panel.setSize(400, 400);
@@ -71,7 +71,7 @@ package com.kh.project.model.dao;
 
 	    }
 	 
-	    void showButton() {
+	    void show() {
 	 
 	        Button btnone = new Button("1");
 	        Button btntwo = new Button("2");

@@ -14,25 +14,25 @@ import java.awt.event.WindowEvent;
 import javax.swing.JPanel;
 
 public class Data5 {
-    private Frame mainFrame;
-    private Label headerLabel;
-    private Label statusLabel;
-    private Panel controlPanel;
+    public Frame mainFrame;
+    public Label headerLabel;
+    public Label statusLabel;
+    public Panel controlPanel;
  
     public Data5() {
-        prepareGUI();
+        GUI();
     }
  
     public static void main(String[] args) {
     	Data5 awtControlDemo = new Data5();
-        awtControlDemo.showButton();
+        awtControlDemo.show();
         JPanel panel = new JPanel();
         
     }
  
     
     
-    public void prepareGUI() {
+    public void GUI() {
         //panel 셋팅
         Frame panel = new Frame("ROOMESCPAE");
         panel.setSize(400, 400);
@@ -66,7 +66,7 @@ public class Data5 {
 
     }
  
-    void showButton() {
+    void show() {
  
         Button btnone = new Button("메소드 종료시");
         Button btntwo = new Button("객체 소멸시");

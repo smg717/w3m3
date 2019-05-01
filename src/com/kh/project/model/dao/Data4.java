@@ -16,25 +16,25 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
  
 public class Data4 {
-    private Frame mainFrame;
-    private Label headerLabel;
-    private Label statusLabel;
-    private Panel controlPanel;
+    public Frame mainFrame;
+    public Label headerLabel;
+    public Label statusLabel;
+    public Panel controlPanel;
  
     public Data4() {
-        prepareGUI();
+        GUI();
     }
  
     public static void main(String[] args) {
     	Data4 awtControlDemo = new Data4();
-        awtControlDemo.showButton();
+        awtControlDemo.show();
         JPanel panel = new JPanel();
         
     }
  
     
     
-    public void prepareGUI() {
+    public void GUI() {
         //panel ¼ÂÆÃ
         Frame panel = new Frame("ROOMESCPAE");
         panel.setSize(400, 400);
@@ -68,7 +68,7 @@ public class Data4 {
 
     }
  
-    void showButton() {
+    void show() {
  
         Button btnone = new Button("Ä¸½¶È­");
         Button btntwo = new Button("ÁÖÃ¼¼º");
