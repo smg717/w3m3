@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Puzzle extends JFrame implements ActionListener{
-   private ImageIcon backImg = new ImageIcon("images/금고열기.jpg");
+   private ImageIcon backImg = new ImageIcon("images/문제1.png");
    private Image img = backImg.getImage();
    
    public void paint(Graphics g) {
@@ -17,22 +17,22 @@ public class Puzzle extends JFrame implements ActionListener{
    }
    
    Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
-   Puzzle(){
+   public Puzzle(){
       super("Puzzle");
       b1 = new Button("3");
-      b1.setBounds(235, 363, 43, 70);
+      b1.setBounds(238, 363, 43, 70);
       b2 = new Button("2");
       b2.setBounds(281, 363, 43, 70);
       b3 = new Button("4");
       b3.setBounds(325, 363, 43, 70);
       b4 = new Button("1");
-      b4.setBounds(235, 430, 43, 70);
+      b4.setBounds(238, 430, 43, 70);
       b5 = new Button("5");
       b5.setBounds(281, 430, 43, 70);
       b6 = new Button("6");
       b6.setBounds(325, 430, 43, 70);
       b7 = new Button("7");
-      b7.setBounds(235, 497, 43, 70);
+      b7.setBounds(238, 497, 43, 70);
       b8 = new Button("");
       b8.setBounds(281, 497, 43, 70);
       b9 = new Button("8");

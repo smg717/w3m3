@@ -9,8 +9,8 @@ public class MainFrame extends JFrame{
 //		this.setLayout(null);
 //		new Ending2(this);
 //		new Open1(this);
-//		new Start(this);
-		new Stage1(this);
+		new Start(this);
+//		new Stage1(this);
 //		new Stage2(this);
 		
 		this.setTitle("食切実 害切実");
