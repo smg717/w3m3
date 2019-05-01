@@ -31,7 +31,7 @@ package com.kh.project.model.dao;
 	        data2 awtControlDemo = new data2();
 	        awtControlDemo.showButton();
 	        JPanel panel = new JPanel();
-	        Image icon = new ImageIcon("src/ujooujoo/tool.JPG").getImage().getScaledInstance(1024, 200, 0);
+	       
 	    }
 	 
 	    

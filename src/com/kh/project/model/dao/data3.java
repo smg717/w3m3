@@ -31,7 +31,7 @@ package com.kh.project.model.dao;
 	        data3 awtControlDemo = new data3();
 	        awtControlDemo.showButton();
 	        JPanel panel = new JPanel();
-	        Image icon = new ImageIcon("src/ujooujoo/tool.JPG").getImage().getScaledInstance(1024, 200, 0);
+	        
 	    }
 	 
 	    
@@ -71,7 +71,7 @@ package com.kh.project.model.dao;
 
 	    }
 	 
-	    private void showButton() {
+	    void showButton() {
 	 
 	        Button btnone = new Button("1");
 	        Button btntwo = new Button("2");
@@ -106,13 +106,14 @@ package com.kh.project.model.dao;
 	   
 	        btnfour.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
-	                statusLabel.setText("문이 열렸습니다");
-	                System.exit(0);
+	                statusLabel.setText("오답입니다");
+	                
 	            }
 	        });
 	        btnfive.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
-	                statusLabel.setText("오답입니다");
+	                statusLabel.setText("문이 열렸습니다");
+	                System.exit(0);
 	            }
 	        });
 	        btnsix.addActionListener(new ActionListener() {
