@@ -16,47 +16,43 @@ import javax.swing.JScrollPane;
 class Start extends JPanel{
 
 	private MainFrame mf;
-	   private JPanel start;
-	   private JLabel label;
-	   private JButton btn;
-	   
-	   JScrollPane scrollPane;
+	private JPanel start;
 
-	   ImageIcon icon;
-	   
-	   public Start(MainFrame mf) {
-	     
-	      this.mf = mf;
-	      this.start = this;
-	      Image icon = new ImageIcon("images/0.PNG").getImage().getScaledInstance(1024, 768, 0); //이미지 사이즈
-			
-			JLabel label = new JLabel(new ImageIcon(icon));
-			JButton btn = new JButton("시작");
-			btn.setBounds(450, 400, 200, 100);
-			btn.setBackground(Color.white);
-			btn.setBorderPainted(false);
-			btn.setOpaque(false);
-			start.add(btn);
-			mf.add(btn);
+	ImageIcon icon;
 
-	      start.add(btn); 
-	      mf.add(btn);
-	      
-	      start.add(label, "Center");
-	      mf.add(start);
+	public Start(MainFrame mf) {
 
-	      mf.add(this);
-	      mf.setVisible(true);
-	      mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.mf = mf;
+		this.start = this;
+		Image icon = new ImageIcon("images/0.PNG").getImage().getScaledInstance(1024, 768, 0); //이미지 사이즈
 
-	      btn.addActionListener(new ActionListener() {
+		JLabel label = new JLabel(new ImageIcon(icon));
+		JButton btn = new JButton("시작");
+		btn.setBounds(450, 400, 200, 100);
+		btn.setBackground(Color.white);
+		btn.setBorderPainted(false);
+		btn.setOpaque(false);
+		start.add(btn);
+		mf.add(btn);
 
-	         @Override
-	         public void actionPerformed(ActionEvent e) {
-	            Changepanel.changepanel(mf,start, new Opening(mf));
-	            mf.remove(btn);
+		start.add(btn); 
+		mf.add(btn);
 
-	         }
-	      });
-	   }
+		start.add(label, "Center");
+		mf.add(start);
+
+		mf.add(this);
+		mf.setVisible(true);
+		mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		btn.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Changepanel.changepanel(mf,start, new Opening(mf));
+				mf.setLayout(null);
+				mf.remove(btn);
+			}
+		});
 	}
+}
