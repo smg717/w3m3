@@ -34,7 +34,7 @@ public class Popup extends JFrame{
 		JPanel panel = new JPanel();
 		panel.setSize(300, 150);
 		
-		JLabel message = new JLabel("∆Àæ˜ ∂ÏøÎ");
+		JLabel message = new JLabel("æ∆¿Ã≈€¿ª »πµÊ«œºÃΩ¿¥œ¥Ÿ.");
 		message.setSize(100, 30);
 		message.setLocation(100, 20);
 		JButton okButton = new JButton("»Æ¿Œ");

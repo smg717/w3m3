@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.project.model.dao.Puzzle;
+
 public class Stage1 extends JPanel{//버튼세개넣기
 	/**
 	 * 
@@ -57,8 +59,8 @@ public class Stage1 extends JPanel{//버튼세개넣기
 		key.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Popup pu = new Popup();
-				pu.PopUp1();
+				Puzzle pz = new Puzzle();
+				
 				
 			}
 		});
