@@ -27,7 +27,8 @@ public class Stage2 extends JPanel {
       JLabel label1 = new JLabel(new ImageIcon(back));
       panel.add(label1);
 
-      JButton btn = new JButton("22");
+//      JButton btn = new JButton("22");
+      JButton btn=new JButton(new ImageIcon ("images/right.PNG"));
       btn.setBounds(900, 600, 50, 50);
       
       label1.add(btn);

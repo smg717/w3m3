@@ -31,8 +31,8 @@ public class Stage1 extends JPanel{//버튼세개넣기
       JLabel label1 = new JLabel(new ImageIcon(back));
       panel.add(label1);
 
-      JButton key = new JButton(new ImageIcon("images/금고2.jpg"));
-      key.setBounds(800, 400, 200, 200);
+      JButton key = new JButton(new ImageIcon("images/키.png"));
+      key.setBounds(300, 50, 130, 120);
       key.setBackground(Color.white);
       key.setBorderPainted(false);
       key.setOpaque(false);    
@@ -40,7 +40,8 @@ public class Stage1 extends JPanel{//버튼세개넣기
       panel.add(key);
       mf.add(key);
 
-      JButton btn = new JButton("11");
+//      JButton btn = new JButton("11");
+      JButton btn=new JButton(new ImageIcon ("images/right.PNG"));
       btn.setBounds(900, 600, 50, 50);
 
       label1.add(btn);
@@ -56,6 +57,13 @@ public class Stage1 extends JPanel{//버튼세개넣기
             mf.remove(panel);
          }
       });
+      key.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            Puzzle pz = new Puzzle();
+         }
+      });
+      
       this.add(panel);
       
       key.addActionListener(new ActionListener() {
@@ -83,7 +91,6 @@ public class Stage1 extends JPanel{//버튼세개넣기
 
    }
 }
-
 
 
 

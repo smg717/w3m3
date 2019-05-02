@@ -1,4 +1,5 @@
 
+
 package com.kh.project.views;
 
 import javax.swing.JFrame;
@@ -19,4 +20,5 @@ public class MainFrame extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
+
 

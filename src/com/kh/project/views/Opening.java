@@ -20,7 +20,7 @@ public class Opening extends JPanel {
 	   private Image icon8;
 	   private JLabel label;
 	   private JLabel label2;
-	   private Button btn;
+	   private JButton btn;
 	   private JPanel opening;
 	   
 	public Opening(MainFrame mf) {//¹æ
@@ -38,7 +38,8 @@ public class Opening extends JPanel {
 		label = new JLabel(new ImageIcon(icon));
 
 
-		btn = new Button(">>");
+//		btn = new Button(">>");
+		btn=new JButton(new ImageIcon ("images/right.PNG"));
 		btn.setBounds(900, 600, 50, 50);
 		btn.addActionListener(new MyEvent());
 

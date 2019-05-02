@@ -1,8 +1,13 @@
 
 package com.kh.project.model.dao;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Button;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -20,13 +25,17 @@ public class Puzzle extends JFrame implements ActionListener{
    Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
    public Puzzle(){
       super("Puzzle");
-      b1 = new Button("3");
+      
+      JPanel NewWindowContainer = new JPanel();
+      setContentPane(NewWindowContainer);
+
+      b1 = new Button("1");
       b1.setBounds(238, 363, 43, 70);
       b2 = new Button("2");
       b2.setBounds(281, 363, 43, 70);
-      b3 = new Button("4");
+      b3 = new Button("3");
       b3.setBounds(325, 363, 43, 70);
-      b4 = new Button("1");
+      b4 = new Button("4");
       b4.setBounds(238, 430, 43, 70);
       b5 = new Button("5");
       b5.setBounds(281, 430, 43, 70);
@@ -58,14 +67,19 @@ public class Puzzle extends JFrame implements ActionListener{
       add(b7);
       add(b8);
       add(b9);
+
       
       setSize(500, 800);
       setLayout(null);
       setVisible(true);
    }
    
+   
+   @Override
    public void actionPerformed(ActionEvent e) {
-      if(e.getSource() == b1) {
+	   Object obj = e.getSource();
+	   
+      if((Button)obj == b1) {
          String label = b1.getLabel();
          if(b2.getLabel().equals("")) {
             b2.setLabel(label);
@@ -76,7 +90,8 @@ public class Puzzle extends JFrame implements ActionListener{
             b1.setLabel("");
          }
       }
-      if(e.getSource() == b2) {
+      
+      if((Button)obj == b2) {
          String label = b2.getLabel();
          if(b1.getLabel().equals("")) {
             b1.setLabel(label);
@@ -91,7 +106,7 @@ public class Puzzle extends JFrame implements ActionListener{
             b2.setLabel("");
          }
       }
-      if(e.getSource() == b3) {
+      if((Button)obj == b3) {
          String label = b3.getLabel();
          if(b2.getLabel().equals("")) {
             b2.setLabel(label);
@@ -102,7 +117,7 @@ public class Puzzle extends JFrame implements ActionListener{
             b3.setLabel("");
          }
       }
-      if(e.getSource() == b4) {
+      if((Button)obj == b4) {
          String label = b4.getLabel();
          if(b1.getLabel().equals("")) {
             b1.setLabel(label);
@@ -117,7 +132,7 @@ public class Puzzle extends JFrame implements ActionListener{
             b4.setLabel("");
          }
       }
-      if(e.getSource() == b5) {
+      if((Button)obj == b5) {
          String label = b5.getLabel();
          if(b2.getLabel().equals("")) {
             b2.setLabel(label);
@@ -136,7 +151,7 @@ public class Puzzle extends JFrame implements ActionListener{
             b5.setLabel("");
          }
       }
-      if(e.getSource() == b6) {
+      if((Button)obj == b6) {
          String label = b6.getLabel();
          if(b9.getLabel().equals("")) {
             b9.setLabel(label);
@@ -147,7 +162,7 @@ public class Puzzle extends JFrame implements ActionListener{
             b6.setLabel("");
          }
       }
-      if(e.getSource() == b7) {
+      if((Button)obj == b7) {
          String label = b7.getLabel();
          if(b4.getLabel().equals("")) {
             b4.setLabel(label);
@@ -158,7 +173,7 @@ public class Puzzle extends JFrame implements ActionListener{
             b7.setLabel("");
          }
       }
-      if(e.getSource() == b8) {
+      if((Button)obj == b8) {
          String label = b8.getLabel();
          if(b9.getLabel().equals("")) {
             b9.setLabel(label);
@@ -173,7 +188,7 @@ public class Puzzle extends JFrame implements ActionListener{
             b8.setLabel("");
          }
       }
-      if(e.getSource() == b9) {
+      if((Button)obj == b9) {
          String label = b9.getLabel();
          if(b6.getLabel().equals("")) {
             b6.setLabel(label);
@@ -185,17 +200,29 @@ public class Puzzle extends JFrame implements ActionListener{
          }
       }
       
-      if(b1.getLabel().equals("1")&&b2.getLabel().equals("2")
+      if (b1.getLabel().equals("1")&&b2.getLabel().equals("2")
             &&b3.getLabel().equals("3")&&b4.getLabel().equals("4")
             &&b5.getLabel().equals("5")&&b6.getLabel().equals("6")
             &&b7.getLabel().equals("7")&&b8.getLabel().equals("8")
-            &&b9.getLabel().equals("")) {
-         JOptionPane.showMessageDialog(this,"������� ȹ���ϼ̽�ϴ�!");
+            &&b9.getLabel().equals("")) 
+    	  
+      {
+       JOptionPane.showMessageDialog(this,"������� ȹ���ϼ̽�ϴ�!");
       }
 
-      this.setVisible(true);
-      this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     
    }
+      public void close() {
+    	  this.addWindowListener(new WindowAdapter() {
+    		  public void windowClosing(WindowEvent e) {
+    			  setVisible (false);
+    			  dispose();
+    		  }
+    	  });
+    	  this.setVisible(true);
+      this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      }
+    
    
    
    
@@ -203,19 +230,5 @@ public static void main(String[] args) {
    new Puzzle();
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
