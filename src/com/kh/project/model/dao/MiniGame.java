@@ -20,14 +20,31 @@ public class MiniGame extends JFrame{
 	}
 }
 class GamePanel extends JPanel{
-	JLabel joo = new JLabel();
-	JLabel tan = new JLabel();
+	JLabel joo;
+	JLabel tan;
 	JLabel bom;
 	
 	public GamePanel() {
 		this.setLayout(null);
 		joo.setSize(100, 100);
-		ImageIcon jooicon = new ImageIcon("images/주인공.jpn");
+		ImageIcon jooicon = new ImageIcon("images/주인공.jpg");
+		joo = new JLabel(jooicon);
+		ImageIcon tanicon = new ImageIcon("images/방망이.jpg");
+		tan = new JLabel(tanicon);
+		ImageIcon bomicon = new ImageIcon("images/타겟.jpg");
+		bom = new JLabel(bomicon);
+		joo.setSize(jooicon.getIconWidth(),jooicon.getIconHeight());
+		tan.setSize(tanicon.getIconWidth(),tanicon.getIconHeight());
+		bom.setSize(bomicon.getIconWidth(),bomicon.getIconHeight());
+		
+		tan.setSize(10, 10);
+		tan.setOpaque(true);
+		
+		
+		
+		
+		
+		
 		
 	}
 }
