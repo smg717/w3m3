@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.kh.project.model.dao.Puzzle;
+
 public class Stage1 extends JPanel{//버튼세개넣기
    /**
     * 
@@ -55,7 +57,16 @@ public class Stage1 extends JPanel{//버튼세개넣기
          }
       });
       this.add(panel);
+      
+      key.addActionListener(new ActionListener() {
 
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			Puzzle pz = new Puzzle();
+			
+		}
+    	  
+      });
 
       //      stage1.add(label1,"center");
       //      mf.add(stage1);
