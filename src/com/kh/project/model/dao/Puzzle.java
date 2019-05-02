@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Puzzle extends JFrame implements ActionListener{
-   private ImageIcon backImg = new ImageIcon("images/���1.png");
+   private ImageIcon backImg = new ImageIcon("images/문제1.png");
    private Image img = backImg.getImage();
    
    public void paint(Graphics g) {
@@ -207,7 +207,7 @@ public class Puzzle extends JFrame implements ActionListener{
             &&b9.getLabel().equals("")) 
     	  
       {
-       JOptionPane.showMessageDialog(this,"������� ȹ���ϼ̽�ϴ�!");
+       JOptionPane.showMessageDialog(this,"占쏙옙占쏙옙占쏙옙占� 획占쏙옙占싹셨쏙옙求占�!");
       }
 
      

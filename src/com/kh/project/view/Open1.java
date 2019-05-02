@@ -1,4 +1,4 @@
-package com.kh.project.views;
+package com.kh.project.view;
 
 import java.awt.Image;
 import java.awt.event.ActionEvent;

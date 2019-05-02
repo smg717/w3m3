@@ -1,7 +1,6 @@
 package com.kh.project.run;
 
-import com.kh.project.model.dao.Puzzle;
-import com.kh.project.views.MainFrame;
+import com.kh.project.view.MainFrame;
 
 public class Run {
 
