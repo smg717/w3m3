@@ -10,22 +10,23 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Open5 extends JPanel{
+public class Open2 extends JPanel{
+
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -8020610765716293894L;
 	private MainFrame mf;
-	private JPanel open5;
+	private JPanel open2;
 	private JButton btn;
 	
-	public Open5(MainFrame mf) {
+	public Open2(MainFrame mf) {
 		
 		this.mf= mf;
-		this.open5 = this;
+		this.open2 = this;
 		
-		 Image talk = new ImageIcon("images/일단나가.png").getImage().getScaledInstance(1024, 200, 0);
+		 Image talk = new ImageIcon("images/2.png").getImage().getScaledInstance(1024, 200, 0);
 		 Image room = new ImageIcon("images/방.png").getImage().getScaledInstance(1024, 786, 0);
 		 
 		 
@@ -49,33 +50,35 @@ public class Open5 extends JPanel{
 		  mf.add(btn);
 		  
 		  
+		  this.add(panel3);
+		  this.add(panel4);
+		  
+		  mf.add(this);
+		  mf.add(panel4,"South");
+		  
+		  
 		  btn.addActionListener(new ActionListener() {
 	            
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	           Changepanel.changepanel(mf, open5, new Stage1(mf));
-	           mf.remove(btn);
-	           mf.remove(panel3);
-	           mf.remove(panel4);
-	           
-	           
-//	           Popup p = new Popup();
-//	           p.puzzle();
-	            
+	            	Changepanel.changepanel(mf, panel3, new Open3 (mf));
+	               
+	               mf.remove(btn);
+	  	           mf.remove(panel3);
+	  	           mf.remove(panel4);
+	  	           
+	               
 	            }
 	         });
 
 		  
 
 		  
-		  this.add(panel3);
-		  this.add(panel4);
-
-		  mf.add(this);
-		  mf.add(panel4,"South");
-		  
 	      mf.setVisible(true);
 	      mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 }
+
+	
+

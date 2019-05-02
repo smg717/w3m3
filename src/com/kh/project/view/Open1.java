@@ -34,19 +34,18 @@ public class Open1 extends JPanel {
 		 
 		 
 		  JPanel panel1 = new JPanel();
-		  JLabel roomLabel = new JLabel(new ImageIcon(room));
-		  panel1.add(roomLabel);
-		    
+		   JLabel roomLabel = new JLabel(new ImageIcon(room));
+		   panel1.add(roomLabel);
+		     
 		     
 		     
 	      JPanel panel2 = new JPanel();
 	      JLabel talkLabel = new JLabel(new ImageIcon(talk));
 		  panel2.add(talkLabel);
-
+	      
 
 //		  btn = new JButton(">>");
 		  btn=new JButton(new ImageIcon ("images/right.PNG"));
-
 		  btn.setBounds(900, 600, 50, 50);
 		  talkLabel.add(btn);
 		  panel2.add(btn);

@@ -1,4 +1,4 @@
-package com.kh.project.views;
+package com.kh.project.view;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
