@@ -1,3 +1,4 @@
+
 package com.kh.project.model.dao;
 
 import java.awt.Button;
@@ -14,7 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Puzzle extends JFrame implements ActionListener{
-   private ImageIcon backImg = new ImageIcon("images/¹®Á¦1.png");
+   private ImageIcon backImg = new ImageIcon("images/ï¿½ï¿½ï¿½1.png");
    private Image img = backImg.getImage();
    
    public void paint(Graphics g) {
@@ -206,7 +207,7 @@ public class Puzzle extends JFrame implements ActionListener{
             &&b9.getLabel().equals("")) 
     	  
       {
-       JOptionPane.showMessageDialog(this,"¾ÆÀÌÅÛÀ» È¹µæÇÏ¼Ì½À´Ï´Ù!");
+       JOptionPane.showMessageDialog(this,"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¹ï¿½ï¿½ï¿½Ï¼Ì½ï¿½Ï´ï¿½!");
       }
 
      
@@ -230,3 +231,4 @@ public static void main(String[] args) {
 }
 }
  
+
