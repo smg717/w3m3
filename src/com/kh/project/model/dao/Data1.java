@@ -30,6 +30,7 @@ public class Data1 {
         awtControlDemo.show();
         JPanel panel = new JPanel();
         
+        
     }
  
     

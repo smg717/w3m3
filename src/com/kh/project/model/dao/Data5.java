@@ -40,6 +40,7 @@ public class Data5 {
         panel.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent windowEvent) {
                
+            	
 
             }
         });

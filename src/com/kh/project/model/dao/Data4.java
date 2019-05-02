@@ -25,6 +25,7 @@ public class Data4 {
         GUI();
     }
  
+    
     public static void main(String[] args) {
     	Data4 awtControlDemo = new Data4();
         awtControlDemo.show();

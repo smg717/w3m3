@@ -25,6 +25,7 @@ package com.kh.project.model.dao;
 	    public Data3() {
 	        GUI();
 	        
+	        
 	    }
 	 
 	    public static void main(String[] args) {
