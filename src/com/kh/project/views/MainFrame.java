@@ -1,3 +1,4 @@
+
 package com.kh.project.views;
 
 import javax.swing.JFrame;
@@ -13,8 +14,9 @@ public class MainFrame extends JFrame{
 //		new Stage1(this);
 //		new Stage2(this);
 		
-		this.setTitle("¿©ÀÚ¼Â ³²ÀÚ¼Â");
+		this.setTitle("ï¿½ï¿½ï¿½Ú¼ï¿½ ï¿½ï¿½ï¿½Ú¼ï¿½");
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
+
