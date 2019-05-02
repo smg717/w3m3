@@ -36,6 +36,7 @@ package com.kh.project.model.dao;
 	    }
 	 
 	    
+	    
 	    public void GUI() {
 	        //panel ¼ÂÆÃ
 	        Frame panel = new Frame("ROOMESCPAE");

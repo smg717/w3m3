@@ -31,6 +31,7 @@ public class Data5 {
     }
  
     
+    
     public void GUI() {
         //panel ¼ÂÆÃ
         Frame panel = new Frame("ROOMESCPAE");
