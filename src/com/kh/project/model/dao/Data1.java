@@ -43,7 +43,6 @@ public class Data1 {
         panel.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent windowEvent) {
                 
-
             }
         });
         
