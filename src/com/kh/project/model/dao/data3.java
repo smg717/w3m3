@@ -15,28 +15,29 @@ package com.kh.project.model.dao;
 	import javax.swing.ImageIcon;
 	import javax.swing.JPanel;
 	 
-	public class data3 {
-	    private Frame mainFrame;
-	    private Label headerLabel;
-	    private Label statusLabel;
-	    private Panel controlPanel;
+	public class Data3 {
+	    public Frame mainFrame;
+	    public Label headerLabel;
+	    public Label statusLabel;
+	    public Panel controlPanel;
 
 	    
-	    public data3() {
-	        prepareGUI();
+	    public Data3() {
+	        GUI();
+	        
 	        
 	    }
 	 
 	    public static void main(String[] args) {
-	        data3 awtControlDemo = new data3();
-	        awtControlDemo.showButton();
+	    	Data3 awtControlDemo = new Data3();
+	        awtControlDemo.show();
 	        JPanel panel = new JPanel();
-	        Image icon = new ImageIcon("src/ujooujoo/tool.JPG").getImage().getScaledInstance(1024, 200, 0);
+	        
 	    }
 	 
 	    
 	    
-	    private void prepareGUI() {
+	    public void GUI() {
 	        //panel 셋팅
 	        Frame panel = new Frame("ROOMESCPAE");
 	        panel.setSize(400, 400);
@@ -71,7 +72,7 @@ package com.kh.project.model.dao;
 
 	    }
 	 
-	    private void showButton() {
+	    void show() {
 	 
 	        Button btnone = new Button("1");
 	        Button btntwo = new Button("2");
@@ -106,13 +107,14 @@ package com.kh.project.model.dao;
 	   
 	        btnfour.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
-	                statusLabel.setText("문이 열렸습니다");
-	                System.exit(0);
+	                statusLabel.setText("오답입니다");
+	                
 	            }
 	        });
 	        btnfive.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
-	                statusLabel.setText("오답입니다");
+	                statusLabel.setText("문이 열렸습니다");
+	                System.exit(0);
 	            }
 	        });
 	        btnsix.addActionListener(new ActionListener() {
