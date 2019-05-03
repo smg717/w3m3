@@ -15,28 +15,29 @@ package com.kh.project.model.dao;
 	import javax.swing.ImageIcon;
 	import javax.swing.JPanel;
 	 
-	public class data2 {
-	    private Frame mainFrame;
-	    private Label headerLabel;
-	    private Label statusLabel;
-	    private Panel controlPanel;
+	public class Data2 {
+	    public Frame mainFrame;
+	    public Label headerLabel;
+	    public Label statusLabel;
+	    public Panel controlPanel;
 
 	    
-	    public data2() {
-	        prepareGUI();
+	    public Data2() {
+	        GUI();
 	        
 	    }
 	 
 	    public static void main(String[] args) {
-	        data2 awtControlDemo = new data2();
-	        awtControlDemo.showButton();
+	    	Data2 awtControlDemo = new Data2();
+	        awtControlDemo.show();
 	        JPanel panel = new JPanel();
-	        Image icon = new ImageIcon("src/ujooujoo/tool.JPG").getImage().getScaledInstance(1024, 200, 0);
+	       
+	        
 	    }
 	 
 	    
 	    
-	    private void prepareGUI() {
+	    public void GUI() {
 	        //panel 셋팅
 	        Frame panel = new Frame("ROOMESCPAE");
 	        panel.setSize(400, 400);
@@ -71,7 +72,7 @@ package com.kh.project.model.dao;
 
 	    }
 	 
-	    private void showButton() {
+	    public void show() {
 	 
 	        Button btnone = new Button("유연성을 확보하기 위해 구체적이지 않은것은 제거");
 	        Button btntwo = new Button("프로그램에서 불필요한점을 추출하지 않는다");
