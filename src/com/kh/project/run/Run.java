@@ -1,13 +1,11 @@
 package com.kh.project.run;
 
-import com.kh.project.model.dao.Puzzle;
-import com.kh.project.views.MainFrame;
+import com.kh.project.view.MainFrame;
 
 public class Run {
 
 	public static void main(String[] args) {
 		new MainFrame();//1
-		//new BackgroundPanel(null);
 	
 	}
 

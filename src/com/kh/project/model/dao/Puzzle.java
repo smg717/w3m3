@@ -15,20 +15,22 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Puzzle extends JFrame implements ActionListener{
-   private ImageIcon backImg = new ImageIcon("images/ï¿½ï¿½ï¿½1.png");
+   private ImageIcon backImg = new ImageIcon("images/±Ý°í.jpg");
    private Image img = backImg.getImage();
    
    public void paint(Graphics g) {
       g.drawImage(img, 0, 0, this);
+      
    }
-   
+   Image back = new ImageIcon("image/±Ý°í.jpg").getImage()
+		   .getScaledInstance(500, 889, 0);
    Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
    public Puzzle(){
       super("Puzzle");
       
       JPanel NewWindowContainer = new JPanel();
       setContentPane(NewWindowContainer);
-
+      
       b1 = new Button("1");
       b1.setBounds(238, 363, 43, 70);
       b2 = new Button("2");
@@ -207,7 +209,7 @@ public class Puzzle extends JFrame implements ActionListener{
             &&b9.getLabel().equals("")) 
     	  
       {
-       JOptionPane.showMessageDialog(this,"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¹ï¿½ï¿½ï¿½Ï¼Ì½ï¿½Ï´ï¿½!");
+       JOptionPane.showMessageDialog(this,"Á¤´ä!");
       }
 
      
@@ -215,12 +217,12 @@ public class Puzzle extends JFrame implements ActionListener{
       public void close() {
     	  this.addWindowListener(new WindowAdapter() {
     		  public void windowClosing(WindowEvent e) {
-    			  setVisible (false);
+    			  setVisible(false);
     			  dispose();
     		  }
     	  });
-    	  this.setVisible(true);
-      this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	  this.setVisible(false);
+    	  this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       }
     
    
