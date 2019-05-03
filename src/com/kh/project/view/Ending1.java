@@ -12,53 +12,55 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Ending1 extends JPanel{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -4131765956688022107L;
-	private JPanel ending1;
-	private MainFrame mf;
 
-	public Ending1(MainFrame mf) {
-		this.mf = mf;
-		this.ending1 = this;
+   /**
+    * 
+    */
+   private static final long serialVersionUID = -4131765956688022107L;
+   private JPanel ending1;
+   private MainFrame mf;
 
-		Image icon = new ImageIcon("images/≈ª√‚.png")
-				.getImage().getScaledInstance(1024, 768, 0); //¿ÃπÃ¡ˆ ªÁ¿Ã¡Ó
-		
-		JPanel panel = new JPanel();
-		JLabel label = new JLabel(new ImageIcon(icon));
-		panel.add(label);
-		
-		
-		JButton btn = new JButton("∞‘¿”¡æ∑·");
-		btn.setBounds(460, 350, 100, 100);
-		btn.setBackground(Color.white);
-		btn.setBorderPainted(false);
-		
-		
-		label.add(btn);
-		panel.add(btn);
-		mf.add(btn);
-		
-		btn.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				if(e.getSource()==btn) {
-					System.exit(0);
-				}
-			}
-			
-		});
-		
-		this.add(panel);
+   public Ending1(MainFrame mf) {
+      this.mf = mf;
+      this.ending1 = this;
+
+      Image icon = new ImageIcon("images/ÌÉàÏ∂ú.png")
+            .getImage().getScaledInstance(1024, 768, 0); //Ïù¥ÎØ∏ÏßÄ ÏÇ¨Ïù¥Ï¶à
+      
+      JPanel panel = new JPanel();
+      JLabel label = new JLabel(new ImageIcon(icon));
+      panel.add(label);
+      
+      
+      JButton btn = new JButton("Í≤åÏûÑÏ¢ÖÎ£å");
+      btn.setBounds(460, 350, 100, 100);
+      btn.setBackground(Color.white);
+      btn.setBorderPainted(false);
+      
+      
+      label.add(btn);
+      panel.add(btn);
+      mf.add(btn);
+      
+      btn.addActionListener(new ActionListener() {
+         
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            if(e.getSource()==btn) {
+               System.exit(0);
+            }
+         }
+         
+      });
+      
+      this.add(panel);
 
 
-		mf.add(this);
-		mf.add(panel);
-		
-		mf.setVisible(true);
-		mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+      mf.add(this);
+      mf.add(panel);
+      
+      mf.setVisible(true);
+      mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   }
 }
+

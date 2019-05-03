@@ -6,7 +6,6 @@ public class Run {
 
 	public static void main(String[] args) {
 		new MainFrame();//1
-		//new BackgroundPanel(null);
 	
 	}
 

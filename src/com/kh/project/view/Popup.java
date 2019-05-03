@@ -1,7 +1,11 @@
 package com.kh.project.view;
 
+import java.awt.Button;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -9,52 +13,39 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Popup extends JFrame{
-	
 	public Popup() {
 		this.setSize(500, 500);
-		this.setTitle("");
-		// ≈∏¿Ã∆≤ √ ±‚»≠
-
-		this.setLayout(null);
-		this.setVisible(true);
-		this.setResizable(false);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	      this.setLayout(null);
+	      this.setLocation(50, 50);     
+	      this.setVisible(true);
+	      this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-
-	protected void close() {
-		this.setVisible(false);
-	}
-	
-	
-	
-	public void PopUp1() {
-		this.setTitle("Game");
-		this.setLayout(null);
-		
-		JPanel panel = new JPanel();
-		panel.setSize(300, 150);
-		
-		JLabel message = new JLabel("æ∆¿Ã≈€¿ª »πµÊ«œºÃΩ¿¥œ¥Ÿ.");
-		message.setSize(100, 30);
-		message.setLocation(100, 20);
-		JButton okButton = new JButton("»Æ¿Œ");
-		okButton.setSize(50, 30);
-		okButton.setLocation(125, 80);
-		
-		okButton.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				close();
-			}
-		});
-		
-		
-		panel.add(message);
-		panel.add(okButton);
-		
-		this.add(panel);
-	}
-
-	
+	public void GamePlay() {
+	      this.setTitle("Puzzle");
+	      this.setLayout(null);
+	      JPanel panel = new JPanel();
+	      panel.setSize(300, 150);
+	      panel.setLayout(null);
+	      JButton okButton = new JButton("ÌôïÏù∏");
+	      okButton.setSize(100, 30);
+	      okButton.setLocation(100, 80);
+	      okButton.addActionListener(new ActionListener() {
+	         @Override
+	         public void actionPerformed(ActionEvent e) {
+	        	 Object obj = e.getSource();	 
+	        	 if((JButton) obj == okButton) {
+	        		 final Frame fs = new Frame("puzzle");
+	        		 fs.setVisible(false);
+	        		 fs.addWindowListener(new WindowAdapter() {
+	        			 public void windowClosing(WindowEvent e) {
+	        				 fs.setVisible(false);
+	        				 fs.setLocation(200, 200);
+	        			 }
+	        		 });
+	        	 }
+	         }
+	      });
+	      panel.add(okButton);
+	      this.add(panel);
+	   }
 }
