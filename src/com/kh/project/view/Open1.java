@@ -29,11 +29,12 @@ public class Open1 extends JPanel {
         this.open1 = this;
         
 		 Image talk = new ImageIcon("images/1.png").getImage().getScaledInstance(1024, 200, 0);
-		 Image room = new ImageIcon("images/¹æ.png").getImage().getScaledInstance(1024, 786, 0);
+		 Image room = new ImageIcon("images/Â¹Ã¦.png").getImage().getScaledInstance(1024, 786, 0);
 		 
 		 
 		 
 		  JPanel panel1 = new JPanel();
+
 		  JLabel roomLabel = new JLabel(new ImageIcon(room));
 		  panel1.add(roomLabel);
 		    
@@ -43,6 +44,11 @@ public class Open1 extends JPanel {
 	      JLabel talkLabel = new JLabel(new ImageIcon(talk));
 		  panel2.add(talkLabel);
 
+
+
+//		  btn = new JButton(">>");
+		  btn=new JButton(new ImageIcon ("images/right.PNG"));
+	      
 
 //		  btn = new JButton(">>");
 		  btn=new JButton(new ImageIcon ("images/right.PNG"));

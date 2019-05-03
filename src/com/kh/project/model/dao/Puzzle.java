@@ -15,14 +15,16 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Puzzle extends JFrame implements ActionListener{
-   private ImageIcon backImg = new ImageIcon("images/±Ý°í.jpg");
+
+   private ImageIcon backImg = new ImageIcon("images/ï¿½Ý°ï¿½.jpg");
+
    private Image img = backImg.getImage();
    
    public void paint(Graphics g) {
       g.drawImage(img, 0, 0, this);
       
    }
-   Image back = new ImageIcon("image/±Ý°í.jpg").getImage()
+   Image back = new ImageIcon("image/ï¿½Ý°ï¿½.jpg").getImage()
 		   .getScaledInstance(500, 889, 0);
    Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
    public Puzzle(){
@@ -209,7 +211,9 @@ public class Puzzle extends JFrame implements ActionListener{
             &&b9.getLabel().equals("")) 
     	  
       {
-       JOptionPane.showMessageDialog(this,"Á¤´ä!");
+
+       JOptionPane.showMessageDialog(this,"ï¿½ï¿½ï¿½!");
+
       }
 
      

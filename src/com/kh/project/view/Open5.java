@@ -25,8 +25,8 @@ public class Open5 extends JPanel{
 		this.mf= mf;
 		this.open5 = this;
 		
-		 Image talk = new ImageIcon("images/�ϴܳ���.png").getImage().getScaledInstance(1024, 200, 0);
-		 Image room = new ImageIcon("images/��.png").getImage().getScaledInstance(1024, 786, 0);
+		 Image talk = new ImageIcon("images/ÀÏ´Ü³ª°¡.png").getImage().getScaledInstance(1024, 200, 0);
+		 Image room = new ImageIcon("images/¹æ.png").getImage().getScaledInstance(1024, 786, 0);
 		 
 		 
 		 
@@ -58,7 +58,7 @@ public class Open5 extends JPanel{
 	           mf.remove(panel3);
 	           mf.remove(panel4);
 	           
-	           
+
 //	           Popup p = new Popup();
 //	           p.puzzle();
 	            

@@ -27,7 +27,7 @@ public class Open2 extends JPanel{
 		this.open2 = this;
 		
 		 Image talk = new ImageIcon("images/2.png").getImage().getScaledInstance(1024, 200, 0);
-		 Image room = new ImageIcon("images/¹æ.png").getImage().getScaledInstance(1024, 786, 0);
+		 Image room = new ImageIcon("images/Â¹Ã¦.png").getImage().getScaledInstance(1024, 786, 0);
 		 
 		 
 		 

@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import com.kh.project.model.dao.Game3;
 import com.kh.project.model.dao.Puzzle;
 
-public class Stage1 extends JPanel{//¹öÆ°¼¼°³³Ö±â
+public class Stage1 extends JPanel{//Â¹Ã¶Ã†Â°Â¼Â¼Â°Â³Â³Ã–Â±Ã¢
    /**
     * 
     */
@@ -25,14 +25,14 @@ public class Stage1 extends JPanel{//¹öÆ°¼¼°³³Ö±â
    public Stage1(MainFrame mf) {
       this.mf = mf;
       this.stage1 = this;
-      Image back = new ImageIcon("images/¹æ.PNG").getImage()
+      Image back = new ImageIcon("images/Â¹Ã¦.PNG").getImage()
             .getScaledInstance(1024, 768, 0);
 
       JPanel panel = new JPanel();
       JLabel label1 = new JLabel(new ImageIcon(back));
       panel.add(label1);
 
-      JButton key = new JButton(new ImageIcon("images/Å°.png"));
+      JButton key = new JButton(new ImageIcon("images/Ã…Â°.png"));
       key.setBounds(300, 50, 130, 120);
       key.setBackground(Color.white);
       key.setBorderPainted(false);
@@ -41,8 +41,8 @@ public class Stage1 extends JPanel{//¹öÆ°¼¼°³³Ö±â
       panel.add(key);
       mf.add(key);
       
-//      JButton btn2 = new JButton(new ImageIcon("images/¹æ¾î±¸.png"));
-      JButton btn2 = new JButton(new ImageIcon("images/Çï¸ä.png"));
+//      JButton btn2 = new JButton(new ImageIcon("images/Â¹Ã¦Â¾Ã®Â±Â¸.png"));
+      JButton btn2 = new JButton(new ImageIcon("images/Ã‡Ã¯Â¸Ã¤.png"));
       btn2.setBounds(700, 400, 312, 190);
       btn2.setBackground(Color.white);
       btn2.setBorderPainted(false);
@@ -106,46 +106,3 @@ public class Stage1 extends JPanel{//¹öÆ°¼¼°³³Ö±â
 
 
    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

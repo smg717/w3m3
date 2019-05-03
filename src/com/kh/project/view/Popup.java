@@ -1,14 +1,17 @@
 package com.kh.project.view;
+
 import java.awt.Button;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
 public class Popup extends JFrame{
 	public Popup() {
 		this.setSize(500, 500);
@@ -23,7 +26,7 @@ public class Popup extends JFrame{
 	      JPanel panel = new JPanel();
 	      panel.setSize(300, 150);
 	      panel.setLayout(null);
-	      JButton okButton = new JButton("»Æ¿Œ");
+	      JButton okButton = new JButton("ÌôïÏù∏");
 	      okButton.setSize(100, 30);
 	      okButton.setLocation(100, 80);
 	      okButton.addActionListener(new ActionListener() {

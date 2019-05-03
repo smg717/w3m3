@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Ending1 extends JPanel{
+
    /**
     * 
     */
@@ -23,15 +24,15 @@ public class Ending1 extends JPanel{
       this.mf = mf;
       this.ending1 = this;
 
-      Image icon = new ImageIcon("images/≈ª√‚.png")
-            .getImage().getScaledInstance(1024, 768, 0); //¿ÃπÃ¡ˆ ªÁ¿Ã¡Ó
+      Image icon = new ImageIcon("images/ÌÉàÏ∂ú.png")
+            .getImage().getScaledInstance(1024, 768, 0); //Ïù¥ÎØ∏ÏßÄ ÏÇ¨Ïù¥Ï¶à
       
       JPanel panel = new JPanel();
       JLabel label = new JLabel(new ImageIcon(icon));
       panel.add(label);
       
       
-      JButton btn = new JButton("∞‘¿”¡æ∑·");
+      JButton btn = new JButton("Í≤åÏûÑÏ¢ÖÎ£å");
       btn.setBounds(460, 350, 100, 100);
       btn.setBackground(Color.white);
       btn.setBorderPainted(false);
@@ -62,3 +63,4 @@ public class Ending1 extends JPanel{
       mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
 }
+

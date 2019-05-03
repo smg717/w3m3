@@ -11,8 +11,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Open3 extends JPanel{
-	
-	
 
 	
 	/**
@@ -29,7 +27,7 @@ public class Open3 extends JPanel{
 		this.open3 = this;
 		
 		 //Image talk = new ImageIcon("images/4.png").getImage().getScaledInstance(1024, 200, 0);
-		 Image punch = new ImageIcon("images/ÆÜ.png").getImage().getScaledInstance(1024, 786, 0);
+		 Image punch = new ImageIcon("images/Ã†Ãœ.png").getImage().getScaledInstance(1024, 786, 0);
 		 
 		 
 //		 btn = new JButton(">>");

@@ -22,7 +22,7 @@ public class Stage2 extends JPanel {
       this.mf = mf;
       this.stage2 = this;
 
-      Image back = new ImageIcon("images/�湮.PNG").getImage()
+      Image back = new ImageIcon("images/¹æ¹®.PNG").getImage()
             .getScaledInstance(1024, 768, 0);
 
       JPanel panel = new JPanel();
@@ -74,3 +74,4 @@ public class Stage2 extends JPanel {
    private static final long serialVersionUID = 7124297795662955232L;
 
 }
+

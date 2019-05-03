@@ -12,8 +12,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Start extends JPanel{
-	
-	
 
 	
 	/**
@@ -84,5 +82,4 @@ public class Start extends JPanel{
 	      mf.setVisible(true);
 	      mf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-
 }
