@@ -3,7 +3,7 @@ package com.kh.project.model.vo;
 import java.io.Serializable;
 
 public class Player implements Serializable{
-
+	//ddds
 	/**
 	 * 
 	 */
